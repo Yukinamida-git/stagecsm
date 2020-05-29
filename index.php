@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <link  rel="stylesheet" href="<?php echo get_stylesheet_uri();?>">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php bloginfo('name');?> - <?php bloginfo('description');?></title>
-</head>
-<body>
-    <main>
-        <h1><?php bloginfo('description');?></h1>
+<?php get_header(); ?>
+<h1><?php bloginfo('description');?></h1>
+    <main id="accueil">
             <?php while(have_posts()) : the_post();?>
                 <article>
+                <a href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail('medium'); ?>
                     <h2><?php the_title();?></h2>
-                    <?php the_post_thumbnail('medium'); ?>
-                    <?php the_content();?>
+                    </a>
+                    <?php the_excerpt();?>
+                    <a href="<?php the_permalink(); ?>">
+                    Lire
+                    </a>
                 </article>
             <?php endwhile; ?>
     </main>
-</body>
-</html>
+<?php get_footer(); ?>
