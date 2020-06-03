@@ -11,7 +11,10 @@ body{
     color: #333;
     margin: 0;
 }
-
+.sidebar{
+    position: absolute;
+    float: left;
+}
 main{
     width: 1000px;
     margin-left: auto;
@@ -28,8 +31,15 @@ footer{
     background-color: #eee;
     padding: 20px;
     margin-top: 20px;
+    text-align: center;
 }
 
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+
+}
 div[class^="menu-"]{
     background-color: #eee;
     padding: 20px;
