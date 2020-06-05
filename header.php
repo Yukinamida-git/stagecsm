@@ -43,20 +43,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 					<span class="nav-label"><?php esc_html_e( 'Close Menu', 'frugix' ); ?></span>
 				</a>
 			</div>
-			
-	<nav id="Menulat">			
-    
-	<?php if ( has_custom_logo() ) : ?>
-				<div class="logo"><?php the_custom_logo(); ?></div>
-			<?php else : ?>
-				<h1 class="mobile-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"  rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php endif; ?>
-	<ul>
-        <li><a href="#"><img class="partnerimg" src="http://localhost/Wordpress/wp-content/uploads/2020/06/Logo-ICS.png" alt=""></a></li>
-        <li><a href="#"><img class="partnerimg" src="http://localhost/Wordpress/wp-content/uploads/2020/06/Logo-IFA.png" alt=""></a></li>
-        <li><a href="#"><img class="partnerimg" src="http://localhost/Wordpress/wp-content/uploads/2020/06/Logo-IFPS.png" alt=""></a></li>
-        <li><a href="#"><img class="partnerimg" src="http://localhost/Wordpress/wp-content/uploads/2020/06/Logo-INB.png" alt=""></a></li>
-        <li><a href="#">CCI</a></li>
-	</ul>
-			</nav>
+	
+<?php get_sidebar(); ?>
 	</header>
+
