@@ -1,9 +1,21 @@
 <?php get_header(); ?>
-    <main>
-            <?php while(have_posts()) : the_post();?>
-                <?php the_post_thumbnail('medium'); ?>
-                    <h1><?php the_title();?></h1>
-                    <?php the_content();?>
-            <?php endwhile; ?>
-    </main>
+
+
+
+	<main id="main">
+		<div class="wrap">
+			<?php
+			while ( have_posts() ) {
+				the_post();
+				get_template_part( 'template-parts/content', 'page' );
+
+				if ( comments_open() || get_comments_number() ) {
+					comments_template();
+				}
+			}
+			?>
+		</div><!-- .wrap -->
+	</main>
+
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
