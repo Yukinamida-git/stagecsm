@@ -4,6 +4,7 @@
 
 	<main id="main">
 		<div class="wrap posts-list">
+			<h1>Bienvenue</h1>
 			<?php
 			if ( have_posts() ) {
 				while ( have_posts() ) {

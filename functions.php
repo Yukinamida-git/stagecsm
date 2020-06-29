@@ -23,7 +23,19 @@ function frugix_setup() {
 	register_nav_menus( array(
 		'main-menu' => __( 'Main Menu', 'frugix' ),
 	) );
+	// function register_my_menu() {
+	// 	register_nav_menu('header-menu',__( 'Header Menu' ));
+	//   }
+	//   add_action( 'init', 'register_my_menu' );
+	
+	//   add_filter( 'wp_nav_menu_items', 'ma_fonction', 10, 2 );
 
+	//   function ma_fonction( $items, $args ) {
+	// 	  // Avec $args, tu peux vérifier quel menu tu affiches
+	// 	  // $items contient le code HTML généré ( une suite de '<li></li>'...)
+	  
+	// 	  return $items;
+	//   }
 	add_theme_support( 'html5', array(
 		'search-form',
 		'comment-form',
